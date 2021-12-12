@@ -21,23 +21,11 @@
         "day": 13,
         "weekday": 1,
         "dst": false,
-        "hour": 1,
-        "minute": 13,
-        "second": 36
+        "hour": 2,
+        "minute": 8,
+        "second": 42
       },
-      "last_camera_pos": "(640, 2210.509521)"
-    }
-  },
-  "START": {
-    "key": "START",
-    "type": 1,
-    "text": "Here's some text, also [color=#00FFFF]this part should be blue[/color] ok",
-    "char": "Character",
-    "tail": "772cea0167",
-    "posx": 382,
-    "posy": -690,
-    "data": {
-
+      "last_camera_pos": "(882.429199, -372.208008)"
     }
   },
   "772cea0167": {
@@ -76,6 +64,18 @@
 
     }
   },
+  "04413fe57f": {
+    "key": "04413fe57f",
+    "type": 1,
+    "text": "You chose the first thing!",
+    "char": "New Char",
+    "tail": "",
+    "posx": -508,
+    "posy": 2241,
+    "data": {
+
+    }
+  },
   "28ad3cfe9c": {
     "key": "28ad3cfe9c",
     "type": 4,
@@ -104,18 +104,6 @@
       ]
     }
   },
-  "04413fe57f": {
-    "key": "04413fe57f",
-    "type": 1,
-    "text": "You chose the first thing!",
-    "char": "New Char",
-    "tail": "",
-    "posx": -508,
-    "posy": 2241,
-    "data": {
-
-    }
-  },
   "2260870d07": {
     "key": "2260870d07",
     "type": 1,
@@ -124,6 +112,30 @@
     "tail": "",
     "posx": 375,
     "posy": 2344,
+    "data": {
+
+    }
+  },
+  "9999": {
+    "key": "9999",
+    "type": 1,
+    "text": "Here's some text, also [color=#00FFFF]this part should be blue[/color] ok",
+    "char": "Character",
+    "tail": "772cea0167",
+    "posx": 382,
+    "posy": -690,
+    "data": {
+
+    }
+  },
+  "START": {
+    "key": "START",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "9999",
+    "posx": 392,
+    "posy": -1243,
     "data": {
 
     }
