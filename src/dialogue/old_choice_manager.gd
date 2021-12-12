@@ -19,7 +19,7 @@ var prev_focus : Control = null
 
 func _ready() -> void:
 	# Pass reference to self to DialogueManager
-	DialogueManager.choice_manager = self
+	#DialogueManager.choice_manager = self
 
 	# Connect signals for choice buttons
 	for choice in all_choice_buttons:
