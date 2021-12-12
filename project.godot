@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="2021MonsterMashJam"
+boot_splash/image="res://spr/util/black128.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/directional_shadow/size=512
+quality/directional_shadow/size.mobile=512
+quality/shadow_atlas/size=512
+quality/shadow_atlas/size.mobile=512
+quality/shadows/filter_mode=0
+environment/default_environment="res://default_env.tres"
