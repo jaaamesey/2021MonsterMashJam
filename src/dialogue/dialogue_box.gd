@@ -280,12 +280,6 @@ func handle_command(command : String):
 			var initial : String = DialogueManager.variable_dict[parameters[0]]
 			var output : float = float(initial) - float(parameters[1])
 			DialogueManager.variable_dict[parameters[0]] = output
-		"show_succulr":
-			if !owner.get_node("FrontLayer/Succulr").visible:
-				is_externally_paused = true
-				#DialogueManager.is_branching = true
-				owner.get_node("FrontLayer/Succulr").visible = true
-				owner.get_node("FrontLayer/Succulr").initialise()
 
 		"go_to":
 			DialogueManager.go_to_dialogue(str(parameters[0]))
