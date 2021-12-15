@@ -21,8 +21,8 @@ func _on_branch(choices: Array):
 		button.visible = true
 		$VBoxContainer.add_child(button)
 		button.connect("pressed", self, "_on_choice_selected", [choice.tail_node, button])
-	visible = true
+	$AnimationPlayer.play("fade_in_choices")
 
 func _on_choice_selected(tail_node: String, _button: Button):
 	choice_controller.select_choice(tail_node)
-	visible = false
+	$AnimationPlayer.play("fade_out_choices")
