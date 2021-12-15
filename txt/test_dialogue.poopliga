@@ -22,10 +22,10 @@
         "weekday": 4,
         "dst": false,
         "hour": 0,
-        "minute": 16,
-        "second": 8
+        "minute": 32,
+        "second": 14
       },
-      "last_camera_pos": "(394.434692, 5416.994629)"
+      "last_camera_pos": "(469.54892, 7961.939941)"
     }
   },
   "772cea0167": {
@@ -221,9 +221,61 @@
     "type": 1,
     "text": "You chose well.",
     "char": "-",
-    "tail": "",
+    "tail": "f39c23d863",
     "posx": 246,
     "posy": 6232,
+    "data": {
+
+    }
+  },
+  "f39c23d863": {
+    "key": "f39c23d863",
+    "type": 1,
+    "text": "Now for the ultimate test.",
+    "char": "",
+    "tail": "4b7dffd9fa",
+    "posx": 246,
+    "posy": 6832,
+    "data": {
+
+    }
+  },
+  "4b7dffd9fa": {
+    "key": "4b7dffd9fa",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 235,
+    "posy": 7639,
+    "data": {
+      "tail_count": 3,
+      "tails": [
+        "083b0dd1eb",
+        "083b0dd1eb",
+        "083b0dd1eb",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Do the ultimate test",
+        "Don't do the ultimate test",
+        "Third option: how about doing only half of the ultimate test?",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "083b0dd1eb": {
+    "key": "083b0dd1eb",
+    "type": 1,
+    "text": "I can't believe you would say that!",
+    "char": "-",
+    "tail": "",
+    "posx": 354,
+    "posy": 8070,
     "data": {
 
     }

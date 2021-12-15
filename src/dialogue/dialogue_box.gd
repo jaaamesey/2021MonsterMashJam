@@ -22,7 +22,7 @@ onready var click_sound: AudioStreamPlayer = get_node(click_sound_path)
 
 var dialogue_controller := MainDialogueController
 
-const DEFAULT_DIALOGUE_SPD : float = 45.0
+const DEFAULT_DIALOGUE_SPD : float = 31.0
 
 # Timers (all timers are measured in seconds)
 const SKIP_DIALOGUE_TIMER_TIME : float = 1.0/30.0
