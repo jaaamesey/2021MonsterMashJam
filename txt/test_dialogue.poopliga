@@ -12,20 +12,20 @@
         "dialogue_box_style": 1,
         "author": "",
         "description": "",
-        "custom_block_attributes": "pause\nchange_level",
+        "custom_block_attributes": "command\npause\nchange_level",
         "spellcheck_ignored_words": ""
       },
       "last_saved": {
         "year": 2021,
         "month": 12,
-        "day": 13,
-        "weekday": 1,
+        "day": 16,
+        "weekday": 4,
         "dst": false,
-        "hour": 2,
-        "minute": 8,
-        "second": 42
+        "hour": 0,
+        "minute": 16,
+        "second": 8
       },
-      "last_camera_pos": "(882.429199, -372.208008)"
+      "last_camera_pos": "(394.434692, 5416.994629)"
     }
   },
   "772cea0167": {
@@ -45,33 +45,21 @@
     "type": 1,
     "text": "This is a different character",
     "char": "New Char",
-    "tail": "5282ddf42f",
+    "tail": "e81dab4e6d",
     "posx": 382,
     "posy": 510,
     "data": {
 
     }
   },
-  "5282ddf42f": {
-    "key": "5282ddf42f",
+  "START2": {
+    "key": "START2",
     "type": 1,
-    "text": "Now it's time to branch the dialogue.",
-    "char": "",
-    "tail": "28ad3cfe9c",
+    "text": "Here's some text, also [color=#00FFFF]this part should be blue[/color] ok",
+    "char": "Character",
+    "tail": "772cea0167",
     "posx": 382,
-    "posy": 1110,
-    "data": {
-
-    }
-  },
-  "04413fe57f": {
-    "key": "04413fe57f",
-    "type": 1,
-    "text": "You chose the first thing!",
-    "char": "New Char",
-    "tail": "",
-    "posx": -508,
-    "posy": 2241,
+    "posy": -690,
     "data": {
 
     }
@@ -83,7 +71,7 @@
     "char": "",
     "tail": "",
     "posx": 377,
-    "posy": 1672,
+    "posy": 3564,
     "data": {
       "tail_count": 6,
       "tails": [
@@ -104,26 +92,62 @@
       ]
     }
   },
+  "820cafe600": {
+    "key": "820cafe600",
+    "type": 1,
+    "text": "The bee, of course, flies anyway, because bees don't care what humans think is impossible.",
+    "char": "",
+    "tail": "f8b02579c4",
+    "posx": 369,
+    "posy": 1763,
+    "data": {
+
+    }
+  },
+  "f8b02579c4": {
+    "key": "f8b02579c4",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "5282ddf42f",
+    "posx": 333,
+    "posy": 2297,
+    "data": {
+
+    }
+  },
+  "5282ddf42f": {
+    "key": "5282ddf42f",
+    "type": 1,
+    "text": "Now it's time to branch the dialogue.",
+    "char": "",
+    "tail": "28ad3cfe9c",
+    "posx": 335,
+    "posy": 2844,
+    "data": {
+
+    }
+  },
   "2260870d07": {
     "key": "2260870d07",
     "type": 1,
     "text": "You chose some other thing!",
     "char": "New Char",
-    "tail": "",
-    "posx": 375,
-    "posy": 2344,
+    "tail": "e07de74c0a",
+    "posx": 955,
+    "posy": 4070,
     "data": {
 
     }
   },
-  "9999": {
-    "key": "9999",
+  "04413fe57f": {
+    "key": "04413fe57f",
     "type": 1,
-    "text": "Here's some text, also [color=#00FFFF]this part should be blue[/color] ok",
-    "char": "Character",
-    "tail": "772cea0167",
-    "posx": 382,
-    "posy": -690,
+    "text": "You chose the first thing!",
+    "char": "New Char",
+    "tail": "e07de74c0a",
+    "posx": -486,
+    "posy": 4081,
     "data": {
 
     }
@@ -133,9 +157,73 @@
     "type": 1,
     "text": "",
     "char": "",
-    "tail": "9999",
-    "posx": 392,
-    "posy": -1243,
+    "tail": "START2",
+    "posx": 380,
+    "posy": -1221,
+    "data": {
+
+    }
+  },
+  "e81dab4e6d": {
+    "key": "e81dab4e6d",
+    "type": 1,
+    "text": "According to all known laws of aviation...\nThere is no way a bee should be able to fly.",
+    "char": "",
+    "tail": "820cafe600",
+    "posx": 382,
+    "posy": 1156,
+    "data": {
+
+    }
+  },
+  "e07de74c0a": {
+    "key": "e07de74c0a",
+    "type": 1,
+    "text": "Now to branch again:",
+    "char": "",
+    "tail": "d99cd4dbdb",
+    "posx": 305,
+    "posy": 5166,
+    "data": {
+
+    }
+  },
+  "d99cd4dbdb": {
+    "key": "d99cd4dbdb",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 308,
+    "posy": 5882,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "55f01172ac",
+        "55f01172ac",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Meep",
+        "meep",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "55f01172ac": {
+    "key": "55f01172ac",
+    "type": 1,
+    "text": "You chose well.",
+    "char": "-",
+    "tail": "",
+    "posx": 246,
+    "posy": 6232,
     "data": {
 
     }

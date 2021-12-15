@@ -1,23 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://fnt/public_sans/PublicSans-Regular.otf" type="DynamicFontData" id=1]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-font_data = ExtResource( 1 )
+[ext_resource path="res://src/dialogue/main_dialogue_box.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="MainDialogueBox" parent="." instance=ExtResource( 2 )]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
-margin_left = -195.0
-margin_top = 4.0
-margin_right = 317.0
-margin_bottom = 110.0
-custom_fonts/normal_font = SubResource( 1 )
-text = "Here's some text"
-__meta__ = {
-"_edit_use_anchors_": false
-}

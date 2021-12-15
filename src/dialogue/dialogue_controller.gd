@@ -1,4 +1,4 @@
-# The DialogueManager Singleton
+# DialogueController
 # ------------------------------------
 # Handles loading dialogue from poopliga/json files and provides methods for
 # moving forward and branching in dialogue, as well as getting dialogue data.
@@ -6,9 +6,12 @@
 # Despite being treated as a Singleton in most cases, other parallel
 # instances of this class could also be run without issue.
 
+class_name DialogueController
+
 extends Node
 
 signal dialogue_change
+signal prompting_branch
 
 var dialogue_dictionary : Dictionary = {}
 var current_dialogue_block : Dictionary = {}
@@ -23,10 +26,6 @@ var is_branching : bool = false
 var past_dialogue_str : String = "" # Formats all past dialogue as a script
 
 var variable_dict : Dictionary = {} # For setting and getting custom dialogue variables
-
-# References to other managers (should generally NOT stay null)
-var dialogue_box: DialogueBox = null
-var choice_manager := ChoiceManager.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -60,6 +59,9 @@ func go_to_next_dialogue():
 
 	# Finally set the current dialogue block to the next
 	var next_id : String = current_dialogue_block["tail"]
+	if next_id.empty():
+		push_warning("End of dialogue!")
+		return
 	go_to_dialogue(next_id)
 
 # Goes to the dialogue of a certain id. Returns an error if block does not exist.
@@ -90,7 +92,7 @@ func go_to_dialogue(id : String):
 			if tail != "" and !dialogue_dictionary.has(tail):
 				push_warning("ERROR: Branch block contains invalid tail ID: " + tail)
 		is_branching = true
-		choice_manager.prompt_choices()
+		emit_signal("prompting_branch")
 		return
 
 	# Handle regular old dialogue blocks
@@ -169,8 +171,8 @@ func get_commands(block : Dictionary = current_dialogue_block) -> Array:
 	var output : Array = []
 	var extra_data : Dictionary = block["data"]
 
-	if extra_data.has("Command"):
-		var commands : Array = extra_data["Command"].split(";")
+	if extra_data.has("command"):
+		var commands : Array = extra_data["command"].split(";")
 		for command in commands:
 			command = command.strip_edges()
 			if command != "":
@@ -226,3 +228,6 @@ func has_var(key : String):
 
 func has_valid_tail() -> bool:
 	return dialogue_dictionary.has(current_dialogue_block["tail"])
+
+func is_end_of_dialogue() -> bool:
+	return current_dialogue_block["tail"].empty()

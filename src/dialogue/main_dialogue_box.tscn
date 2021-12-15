@@ -1,0 +1,209 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/dialogue/dialogue_box.gd" type="Script" id=1]
+[ext_resource path="res://fnt/public_sans/PublicSans-Light.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://fnt/public_sans/PublicSans-Bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://spr/dialogue/triangle.png" type="Texture" id=4]
+[ext_resource path="res://fnt/public_sans/PublicSans-Italic.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://fnt/default_font.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/dialogue/choice_selector.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+extra_spacing_bottom = 4
+extra_spacing_space = 1
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "New Anim"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 931, 642 ), Vector2( 931, 639 ), Vector2( 931, 642 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.898039, 0.898039, 0.898039, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 5 )
+
+[node name="MainDialogueBox" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -640.0
+margin_top = -360.0
+margin_right = 640.0
+margin_bottom = 360.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+dialogue_rich_text_label_path = NodePath("DialogueRichTextLabel")
+character_label_path = NodePath("CharacterLabel")
+done_indicator_path = NodePath("DoneIndicator")
+skip_indicator_path = NodePath("SkipIndicator")
+next_button_path = NodePath("NextDialogueButton")
+blip_sound_path = NodePath("Sounds/blip")
+click_sound_path = NodePath("Sounds/click")
+
+[node name="Background" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -640.0
+margin_top = -720.0
+margin_right = -600.0
+margin_bottom = -680.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 291.0
+margin_top = 457.0
+margin_right = 949.0
+margin_bottom = 631.0
+color = Color( 0, 0, 0, 0.741176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharacterLabel" type="Label" parent="."]
+margin_left = 336.0
+margin_top = 510.0
+margin_right = 463.0
+margin_bottom = 543.0
+custom_fonts/font = SubResource( 2 )
+text = "Character"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DialogueRichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -304.0
+margin_top = -175.0
+margin_right = 304.0
+margin_bottom = -67.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Here's some test dialogue! Hopefully it should be long enough to trigger a line break, oh yes it looks like it did."
+text = "Here's some test dialogue! Hopefully it should be long enough to trigger a line break, oh yes it looks like it did."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DoneIndicator" type="TextureRect" parent="."]
+margin_left = 931.0
+margin_top = 642.0
+margin_right = 962.0
+margin_bottom = 662.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DoneIndicator"]
+autoplay = "New Anim"
+"anims/New Anim" = SubResource( 4 )
+
+[node name="SkipIndicator" type="Label" parent="."]
+margin_left = 885.0
+margin_top = 504.0
+margin_right = 961.0
+margin_bottom = 524.0
+custom_fonts/font = SubResource( 3 )
+text = "Skipping..."
+
+[node name="NextDialogueButton" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceSelector" type="Control" parent="."]
+margin_left = 790.0
+margin_top = 335.0
+margin_right = 969.0
+margin_bottom = 497.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ChoiceSelector"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.741176 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChoiceSelector"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonTemplate" type="Button" parent="ChoiceSelector/VBoxContainer"]
+margin_right = 179.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="Label" type="Label" parent="ChoiceSelector/VBoxContainer/ButtonTemplate"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 173.0
+margin_bottom = 48.0
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 6 )
+text = "This is a test label for this button"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="blip" type="AudioStreamPlayer" parent="Sounds"]
+
+[node name="click" type="AudioStreamPlayer" parent="Sounds"]
