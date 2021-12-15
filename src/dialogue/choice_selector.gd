@@ -24,5 +24,10 @@ func _on_branch(choices: Array):
 	$AnimationPlayer.play("fade_in_choices")
 
 func _on_choice_selected(tail_node: String, _button: Button):
-	choice_controller.select_choice(tail_node)
+	for button in $VBoxContainer.get_children():
+		button.disconnect("pressed", self, "_on_choice_selected")
+
+	owner.get_node("Sounds/click").play()
 	$AnimationPlayer.play("fade_out_choices")
+	yield(get_tree().create_timer(0.5), "timeout")
+	choice_controller.select_choice(tail_node)

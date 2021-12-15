@@ -39,3 +39,4 @@ func _on_branch():
 func select_choice(tail_node: String):
 	dialogue_controller.is_branching = false
 	dialogue_controller.go_to_dialogue(tail_node)
+	print("Selected: " + tail_node)
