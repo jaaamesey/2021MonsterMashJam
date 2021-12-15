@@ -262,10 +262,12 @@ __meta__ = {
 }
 
 [node name="ChoiceSelector" type="Control" parent="."]
+visible = false
+modulate = Color( 0.237679, 0.237679, 0.237679, 0.0031183 )
 margin_left = 790.0
-margin_top = 165.0
+margin_top = 179.849
 margin_right = 969.0
-margin_bottom = 491.001
+margin_bottom = 505.85
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
