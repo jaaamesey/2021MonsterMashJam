@@ -46,6 +46,7 @@ MusicManager="*res://src/sound/music_manager.gd"
 SoundManager="*res://src/sound/sound_manager.gd"
 MainDialogueController="*res://src/dialogue/dialogue_controller.gd"
 MainChoiceController="*res://src/dialogue/choice_controller.gd"
+MainInventoryController="*res://src/inventory_controller.gd"
 
 [debug]
 
