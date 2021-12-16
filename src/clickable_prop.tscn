@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://spr/util/ekans.png" type="Texture" id=1]
+[ext_resource path="res://src/clickable_prop.gd" type="Script" id=2]
+[ext_resource path="res://fx/outline.gdshader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = ExtResource( 3 )
+shader_param/line_color = Color( 1, 1, 1, 1 )
+shader_param/line_thickness = 6.0
+
+[node name="ClickableProp" type="Area2D"]
+position = Vector2( 486, 464 )
+scale = Vector2( 0.308421, 0.308421 )
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -103.754, -94.0273 )
+polygon = PoolVector2Array( -68.0887, -74.5734, 29.1809, -132.935, 100.512, -113.481, 132.935, -58.3617, 178.328, -25.9385, 188.055, 22.6963, 165.358, 90.785, 220.478, 87.5427, 256.143, 103.754, 265.87, 142.662, 298.294, 87.5427, 301.536, -16.2115, 256.143, -90.7849, 275.597, -103.754, 301.536, -71.3311, 333.959, -29.1808, 359.898, 51.8772, 350.171, 136.178, 304.778, 204.266, 301.536, 243.174, 285.324, 272.355, 158.874, 311.263, -16.2115, 298.294, -74.5734, 246.417, -68.0887, 191.297, -32.4232, 168.601, -29.1809, 129.693, 9.72705, 74.5735, 35.6655, 48.6349, 9.72705, 64.8464, -29.1809, 51.8772, -35.6655, 12.9694, -61.6041, 0, -81.058, -29.1808 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 7 )
+texture = ExtResource( 1 )
+offset = Vector2( 38.9077, 0 )

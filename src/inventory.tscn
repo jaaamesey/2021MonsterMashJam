@@ -17,6 +17,7 @@ font_data = ExtResource( 4 )
 [node name="Inventory" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -70,7 +71,6 @@ expand = true
 stretch_mode = 6
 
 [node name="InventoryTooltip" type="Label" parent="."]
-visible = false
 margin_left = 315.0
 margin_top = 507.0
 margin_right = 477.0

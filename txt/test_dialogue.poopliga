@@ -21,11 +21,11 @@
         "day": 16,
         "weekday": 4,
         "dst": false,
-        "hour": 0,
-        "minute": 32,
-        "second": 14
+        "hour": 19,
+        "minute": 16,
+        "second": 31
       },
-      "last_camera_pos": "(469.54892, 7961.939941)"
+      "last_camera_pos": "(3601.696777, -827.786682)"
     }
   },
   "772cea0167": {
@@ -52,8 +52,8 @@
 
     }
   },
-  "START2": {
-    "key": "START2",
+  "2424": {
+    "key": "2424",
     "type": 1,
     "text": "Here's some text, also [color=#00FFFF]this part should be blue[/color] ok",
     "char": "Character",
@@ -157,7 +157,7 @@
     "type": 1,
     "text": "",
     "char": "",
-    "tail": "START2",
+    "tail": "2424",
     "posx": 380,
     "posy": -1221,
     "data": {
@@ -276,6 +276,194 @@
     "tail": "",
     "posx": 354,
     "posy": 8070,
+    "data": {
+
+    }
+  },
+  "Click events": {
+    "key": "Click events",
+    "type": 2,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 2696,
+    "posy": -1459,
+    "data": {
+
+    }
+  },
+  "M_ekans": {
+    "key": "M_ekans",
+    "type": 1,
+    "text": "The Ekans stares at you longingly.",
+    "char": "-",
+    "tail": "2cdcc4ec38",
+    "posx": 2416,
+    "posy": -1190,
+    "data": {
+
+    }
+  },
+  "2cdcc4ec38": {
+    "key": "2cdcc4ec38",
+    "type": 1,
+    "text": "What do you do?",
+    "char": "",
+    "tail": "4f21a9e991",
+    "posx": 2416,
+    "posy": -590,
+    "data": {
+
+    }
+  },
+  "4f21a9e991": {
+    "key": "4f21a9e991",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 2420,
+    "posy": 1,
+    "data": {
+      "tail_count": 3,
+      "tails": [
+        "27bd705aa1",
+        "27bd705aa1",
+        "2b03d4c043",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Feed it",
+        "Pet it",
+        "Refuse to acknowledge its presence",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "2b03d4c043": {
+    "key": "2b03d4c043",
+    "type": 1,
+    "text": "Wrong answer.",
+    "char": "",
+    "tail": "",
+    "posx": 3150,
+    "posy": 604,
+    "data": {
+
+    }
+  },
+  "27bd705aa1": {
+    "key": "27bd705aa1",
+    "type": 1,
+    "text": "The Ekans is pleased. You live to see another day.",
+    "char": "-",
+    "tail": "",
+    "posx": 2072,
+    "posy": 619,
+    "data": {
+
+    }
+  },
+  "GEN_FAIL": {
+    "key": "GEN_FAIL",
+    "type": 1,
+    "text": "Whatever you're trying to do isn't working.",
+    "char": "-",
+    "tail": "c7b8949bc6",
+    "posx": 1703,
+    "posy": -2673,
+    "data": {
+
+    }
+  },
+  "c7b8949bc6": {
+    "key": "c7b8949bc6",
+    "type": 1,
+    "text": "Maybe try using your [color=#00FFFF]magnifying glass[/color] instead?",
+    "char": "",
+    "tail": "",
+    "posx": 1703,
+    "posy": -2125,
+    "data": {
+
+    }
+  },
+  "M_FAIL": {
+    "key": "M_FAIL",
+    "type": 1,
+    "text": "It looks like whatever you're trying to examine...\n...doesn't want to be examined.",
+    "char": "-",
+    "tail": "",
+    "posx": 2545,
+    "posy": -2704,
+    "data": {
+
+    }
+  },
+  "328f606cbb": {
+    "key": "328f606cbb",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 3502,
+    "posy": -681,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "f33b447490",
+        "945d0e145f",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "M_door_tst": {
+    "key": "M_door_tst",
+    "type": 1,
+    "text": "Go through the door to carriage X?",
+    "char": "-",
+    "tail": "328f606cbb",
+    "posx": 3499,
+    "posy": -1239,
+    "data": {
+
+    }
+  },
+  "f33b447490": {
+    "key": "f33b447490",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 3249,
+    "posy": -372,
+    "data": {
+
+    }
+  },
+  "945d0e145f": {
+    "key": "945d0e145f",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 4040,
+    "posy": -371,
     "data": {
 
     }

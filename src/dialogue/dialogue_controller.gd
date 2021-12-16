@@ -30,7 +30,7 @@ var variable_dict : Dictionary = {} # For setting and getting custom dialogue va
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	dialogue_dictionary = load_dialogue_dictionary("res://txt/test_dialogue.poopliga")
-	current_dialogue_block = dialogue_dictionary["START"]
+	#current_dialogue_block = dialogue_dictionary["START"]
 
 # A function that just tests out the current dialogue in the command line. Useful for debugging.
 func test_dialogue():
@@ -60,7 +60,10 @@ func go_to_next_dialogue():
 	# Finally set the current dialogue block to the next
 	var next_id : String = current_dialogue_block["tail"]
 	if next_id.empty():
-		push_warning("End of dialogue!")
+		#push_warning("End of dialogue!")
+		# If at end of dialogue, stop
+		current_dialogue_block = {}
+		emit_signal("dialogue_change")
 		return
 	go_to_dialogue(next_id)
 
@@ -168,6 +171,7 @@ func get_text_replacement(to_replace : String) -> String:
 			return to_replace
 
 func get_commands(block : Dictionary = current_dialogue_block) -> Array:
+	if !block or block.empty(): return []
 	var output : Array = []
 	var extra_data : Dictionary = block["data"]
 
@@ -197,6 +201,8 @@ func load_dialogue_dictionary(file) -> Dictionary:
 
 # Getters
 func get_current_text() -> String:
+	if !current_dialogue_block:
+		return ""
 	return current_dialogue_block["text"]
 
 # Returns the current character. Passing a value of true will make it return
@@ -231,3 +237,6 @@ func has_valid_tail() -> bool:
 
 func is_end_of_dialogue() -> bool:
 	return current_dialogue_block["tail"].empty()
+
+func is_id_valid(id) -> bool:
+	return dialogue_dictionary.has(id)

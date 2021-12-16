@@ -62,7 +62,7 @@ func _ready() -> void:
 	dialogue_controller.connect("dialogue_change", self, "handle_new_dialogue")
 
 	set_process(false)
-	visible = true
+	#visible = true
 	yield(get_tree().create_timer(0.75), "timeout")
 	set_process(true)
 
@@ -114,6 +114,9 @@ func _process(delta: float) -> void:
 		skip_dialogue_timer -= delta
 
 func tick_dialogue(delta : float) -> void:
+	if !dialogue_controller.current_dialogue_block:
+		return
+
 	if dialogue_controller.get_current_text().strip_edges() == "" or dialogue_controller.get_current_text().empty():
 		on_next_pressed(false, true)
 		return
@@ -203,7 +206,12 @@ func on_next_pressed(play_sound := true, force := false) -> void:
 			click_sound.play(0.01)
 
 func handle_new_dialogue() -> void:
+	visible = true
 	if dialogue_controller.is_branching: # Keep existing text if branching
+		return
+		
+	if dialogue_controller.current_dialogue_block.empty():
+		visible = false
 		return
 
 	# Handle individual dialogue logic stuff here

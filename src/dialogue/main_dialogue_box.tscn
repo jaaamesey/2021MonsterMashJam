@@ -160,6 +160,7 @@ margin_left = -640.0
 margin_top = -360.0
 margin_right = 640.0
 margin_bottom = 360.0
+mouse_filter = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -181,6 +182,7 @@ margin_left = -640.0
 margin_top = -720.0
 margin_right = -600.0
 margin_bottom = -680.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -194,6 +196,7 @@ margin_left = 291.0
 margin_top = 457.0
 margin_right = 949.0
 margin_bottom = 631.0
+mouse_filter = 2
 color = Color( 0, 0, 0, 0.741176 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -262,12 +265,12 @@ __meta__ = {
 }
 
 [node name="ChoiceSelector" type="Control" parent="."]
-visible = false
 modulate = Color( 0.237679, 0.237679, 0.237679, 0.0031183 )
 margin_left = 790.0
 margin_top = 179.849
 margin_right = 969.0
 margin_bottom = 505.85
+mouse_filter = 2
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

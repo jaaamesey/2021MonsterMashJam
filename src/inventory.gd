@@ -10,6 +10,7 @@ var item_name_to_button := {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	inventory_tooltip.visible = false
 	for child in hbox.get_children():
 		hbox.remove_child(child)
 	
