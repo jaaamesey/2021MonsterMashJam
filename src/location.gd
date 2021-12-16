@@ -9,6 +9,7 @@ var can_click_on_prop := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$BlackOverlay.color = Color.black
 	$TurnAroundButton.connect("pressed", self, "_turn_around")
 	_update_look_dir()
 	$BlackOverlay/AnimationPlayer.play("fade_in")
@@ -68,3 +69,8 @@ func select_prop(name: String):
 func deselect_prop(name: String):
 	props_under_cursor.erase(name)
 	emit_signal("selection_changed")
+
+func exit():
+	$TurnAroundButton.disabled = true
+	can_click_on_prop = false
+	$BlackOverlay/AnimationPlayer.play("fade_out")

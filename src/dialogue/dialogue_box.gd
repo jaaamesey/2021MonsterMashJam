@@ -8,6 +8,7 @@ export(NodePath) var skip_indicator_path
 export(NodePath) var next_button_path
 export(NodePath) var blip_sound_path
 export(NodePath) var click_sound_path
+export(NodePath) var location_controller_path
 
 #onready var config_control = get_parent().owner.get_node("MenuLayer/Config")
 #onready var log_control = get_parent().owner.get_node("MenuLayer/Log")
@@ -19,6 +20,7 @@ onready var skip_indicator: Control = get_node(skip_indicator_path)
 onready var next_button: Button = get_node(next_button_path)
 onready var blip_sound: AudioStreamPlayer = get_node(blip_sound_path)
 onready var click_sound: AudioStreamPlayer = get_node(click_sound_path)
+onready var location_controller = get_node(location_controller_path)
 
 var dialogue_controller := MainDialogueController
 
@@ -254,6 +256,7 @@ func handle_new_dialogue() -> void:
 	if character_label.text in ["-", "."]:
 		character_label.text = ""
 
+# TODO: Move command handling code out of dialogue box
 func handle_command(command : String):
 	command = command.strip_edges()
 	# Get parameters
@@ -353,6 +356,9 @@ func handle_command(command : String):
 					behaviour = MusicManager.REPEAT
 
 			MusicManager.set_behaviour(behaviour)
+		"move_to":
+			var location_name: String = parameters[0]
+			location_controller.move_to(location_name)
 		_:
 			push_warning("Unimplemented command: " + command)
 

@@ -18,14 +18,14 @@
       "last_saved": {
         "year": 2021,
         "month": 12,
-        "day": 16,
-        "weekday": 4,
+        "day": 17,
+        "weekday": 5,
         "dst": false,
-        "hour": 19,
-        "minute": 16,
-        "second": 31
+        "hour": 2,
+        "minute": 26,
+        "second": 18
       },
-      "last_camera_pos": "(3601.696777, -827.786682)"
+      "last_camera_pos": "(4614.14502, -1055.938965)"
     }
   },
   "772cea0167": {
@@ -404,6 +404,42 @@
 
     }
   },
+  "945d0e145f": {
+    "key": "945d0e145f",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 4040,
+    "posy": -371,
+    "data": {
+
+    }
+  },
+  "f33b447490": {
+    "key": "f33b447490",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 3249,
+    "posy": -372,
+    "data": {
+      "command": "move_to(example2.tscn)"
+    }
+  },
+  "M_door_tst": {
+    "key": "M_door_tst",
+    "type": 1,
+    "text": "Go through the door to carriage B?",
+    "char": "-",
+    "tail": "328f606cbb",
+    "posx": 3499,
+    "posy": -1239,
+    "data": {
+
+    }
+  },
   "328f606cbb": {
     "key": "328f606cbb",
     "type": 4,
@@ -432,38 +468,66 @@
       ]
     }
   },
-  "M_door_tst": {
-    "key": "M_door_tst",
+  "612269b132": {
+    "key": "612269b132",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 4795,
+    "posy": -713,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "6fc9abc148",
+        "5f3dbf890a",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "5f3dbf890a": {
+    "key": "5f3dbf890a",
     "type": 1,
-    "text": "Go through the door to carriage X?",
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 5466,
+    "posy": -198,
+    "data": {
+
+    }
+  },
+  "6fc9abc148": {
+    "key": "6fc9abc148",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 4622,
+    "posy": 110,
+    "data": {
+      "command": "move_to(example_location.tscn)"
+    }
+  },
+  "M_door_ts2": {
+    "key": "M_door_ts2",
+    "type": 1,
+    "text": "Go through the door to carriage A?",
     "char": "-",
-    "tail": "328f606cbb",
-    "posx": 3499,
-    "posy": -1239,
-    "data": {
-
-    }
-  },
-  "f33b447490": {
-    "key": "f33b447490",
-    "type": 1,
-    "text": "",
-    "char": "",
-    "tail": "",
-    "posx": 3249,
-    "posy": -372,
-    "data": {
-
-    }
-  },
-  "945d0e145f": {
-    "key": "945d0e145f",
-    "type": 1,
-    "text": "",
-    "char": "",
-    "tail": "",
-    "posx": 4040,
-    "posy": -371,
+    "tail": "612269b132",
+    "posx": 4696,
+    "posy": -1269,
     "data": {
 
     }
