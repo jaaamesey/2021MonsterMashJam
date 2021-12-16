@@ -1,5 +1,6 @@
 extends Control
 
+var white_outline_material := preload("res://fx/simple_white_outline.tres").duplicate()
 
 onready var hbox: HBoxContainer = $ColorRect/ScrollContainer/HBoxContainer
 onready var inventory_cursor: Control = $InventoryCursor
@@ -24,6 +25,10 @@ func _process(_delta: float):
 	if selected_item:
 		var selected_button: TextureButton = item_name_to_button[selected_item.name]
 		cursor_target_pos.x = selected_button.rect_global_position.x
+		selected_button.material = white_outline_material
+		var thickness := selected_button.texture_normal.get_size().length() / 85
+		selected_button.material.set_shader_param('line_thickness', thickness)
+
 	inventory_cursor.rect_global_position = inventory_cursor.rect_global_position.move_toward(cursor_target_pos, cursor_anim_spd)
 func _update_items(_item: Dictionary, items: Array):
 	for child in hbox.get_children():
@@ -49,5 +54,6 @@ func _on_item_unhovered(_item: Dictionary, _item_button: TextureButton):
 	inventory_tooltip.visible = false
 	
 func _on_item_selected(item: Dictionary, _item_button: TextureButton):
+	for child in hbox.get_children():
+		child.material = null
 	MainInventoryController.select_item(item)
-
