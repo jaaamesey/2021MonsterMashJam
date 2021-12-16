@@ -21,11 +21,11 @@
         "day": 17,
         "weekday": 5,
         "dst": false,
-        "hour": 2,
-        "minute": 26,
-        "second": 18
+        "hour": 3,
+        "minute": 5,
+        "second": 31
       },
-      "last_camera_pos": "(4614.14502, -1055.938965)"
+      "last_camera_pos": "(-2695.766602, 10760.229492)"
     }
   },
   "772cea0167": {
@@ -152,8 +152,8 @@
 
     }
   },
-  "START": {
-    "key": "START",
+  "TEST_START": {
+    "key": "TEST_START",
     "type": 1,
     "text": "",
     "char": "",
@@ -528,6 +528,426 @@
     "tail": "612269b132",
     "posx": 4696,
     "posy": -1269,
+    "data": {
+
+    }
+  },
+  "<--- Actual dialogue": {
+    "key": "<--- Actual dialogue",
+    "type": 2,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -823,
+    "posy": -2252,
+    "data": {
+
+    }
+  },
+  "START": {
+    "key": "START",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "fb311e3fa4",
+    "posx": -2677,
+    "posy": -2128,
+    "data": {
+
+    }
+  },
+  "fb311e3fa4": {
+    "key": "fb311e3fa4",
+    "type": 1,
+    "text": "Hey you, you're finally awake.",
+    "char": "Passenger",
+    "tail": "de9149228c",
+    "posx": -2677,
+    "posy": -1528,
+    "data": {
+
+    }
+  },
+  "de9149228c": {
+    "key": "de9149228c",
+    "type": 1,
+    "text": "I never thought a detective like you would be so sleepy.",
+    "char": "Passenger",
+    "tail": "9295a6e446",
+    "posx": -2677,
+    "posy": -928,
+    "data": {
+
+    }
+  },
+  "9295a6e446": {
+    "key": "9295a6e446",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -2682,
+    "posy": -270,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "93e180b841",
+        "7b52d31a24",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"I'm not a detective\"",
+        "\"Where am I?\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "7b52d31a24": {
+    "key": "7b52d31a24",
+    "type": 1,
+    "text": "You're on a train to Bathurst, like the rest of us here.",
+    "char": "Passenger",
+    "tail": "d404d7985e",
+    "posx": -2361,
+    "posy": 103,
+    "data": {
+
+    }
+  },
+  "d404d7985e": {
+    "key": "d404d7985e",
+    "type": 1,
+    "text": "Jeez, for a detective you sure are forgetful.",
+    "char": "",
+    "tail": "aa856185d8",
+    "posx": -2283,
+    "posy": 703,
+    "data": {
+
+    }
+  },
+  "93e180b841": {
+    "key": "93e180b841",
+    "type": 1,
+    "text": "Now's not the time for jokes. You're clearly a detective. You have a magnifying glass and everything.",
+    "char": "Passenger",
+    "tail": "9295a6e446",
+    "posx": -3768,
+    "posy": 69,
+    "data": {
+
+    }
+  },
+  "aa856185d8": {
+    "key": "aa856185d8",
+    "type": 1,
+    "text": "...Oh, I get it - you must be undercover or something!",
+    "char": "",
+    "tail": "bc0b892868",
+    "posx": -2283,
+    "posy": 1303,
+    "data": {
+
+    }
+  },
+  "bc0b892868": {
+    "key": "bc0b892868",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -2277,
+    "posy": 1834,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "3c5ba5b470",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"That cannot be confirmed or denied\"",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "3c5ba5b470": {
+    "key": "3c5ba5b470",
+    "type": 1,
+    "text": "Yep, I see how it is. Anyway, someone on this train has been murdered.",
+    "char": "Passenger",
+    "tail": "d6b86a8957",
+    "posx": -2496,
+    "posy": 2242,
+    "data": {
+
+    }
+  },
+  "d6b86a8957": {
+    "key": "d6b86a8957",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -2488,
+    "posy": 2870,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "28b39f954f",
+        "28b39f954f",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"Murdered?\"",
+        "\"This is a lot to drop on someone who has just woken up\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "28b39f954f": {
+    "key": "28b39f954f",
+    "type": 1,
+    "text": "That's right, murdered. That's what we gathered from the train guards, anyway. ",
+    "char": "Passenger",
+    "tail": "a44a19522c",
+    "posx": -2546,
+    "posy": 3245,
+    "data": {
+
+    }
+  },
+  "a44a19522c": {
+    "key": "a44a19522c",
+    "type": 1,
+    "text": "We could really use your help.",
+    "char": "",
+    "tail": "eb6556415a",
+    "posx": -2546,
+    "posy": 3845,
+    "data": {
+
+    }
+  },
+  "eb6556415a": {
+    "key": "eb6556415a",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -2531,
+    "posy": 4537,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "015b4e0cdb",
+        "967c486505",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"I'm not that kind of detective\"",
+        "\"Sure\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "44d81ed5a3": {
+    "key": "44d81ed5a3",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -2988,
+    "posy": 5489,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "905536bf1b",
+        "905536bf1b",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"That's none of your business\"",
+        "\"I'm a copyright infringement detective\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "015b4e0cdb": {
+    "key": "015b4e0cdb",
+    "type": 1,
+    "text": "Oh really? What kind of detective are you, then, if you aren't out solving murders all the time?",
+    "char": "Passenger",
+    "tail": "44d81ed5a3",
+    "posx": -2900,
+    "posy": 4853,
+    "data": {
+
+    }
+  },
+  "905536bf1b": {
+    "key": "905536bf1b",
+    "type": 1,
+    "text": "...Very well, then.",
+    "char": "Passenger",
+    "tail": "92003512fb",
+    "posx": -3768,
+    "posy": 5936,
+    "data": {
+
+    }
+  },
+  "92003512fb": {
+    "key": "92003512fb",
+    "type": 1,
+    "text": "But you will help solve this mystery, will you not?",
+    "char": "",
+    "tail": "040f6f4d0a",
+    "posx": -3671,
+    "posy": 6541,
+    "data": {
+
+    }
+  },
+  "040f6f4d0a": {
+    "key": "040f6f4d0a",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -3418,
+    "posy": 7207,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "967c486505",
+        "967c486505",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"Sure\"",
+        "\"Do I have a choice?\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "967c486505": {
+    "key": "967c486505",
+    "type": 1,
+    "text": "Thank you so much!",
+    "char": "Passenger",
+    "tail": "4541fa2800",
+    "posx": -2751,
+    "posy": 7563,
+    "data": {
+
+    }
+  },
+  "4541fa2800": {
+    "key": "4541fa2800",
+    "type": 1,
+    "text": "As you should already know, being a detective and all, you can use your [color=#00FFFF]magnifying glass[/color] to examine objects.",
+    "char": "",
+    "tail": "46cc25a9b5",
+    "posx": -2751,
+    "posy": 8163,
+    "data": {
+
+    }
+  },
+  "46cc25a9b5": {
+    "key": "46cc25a9b5",
+    "type": 1,
+    "text": "You will also need to use your [color=#00FFFF]magnifying glass[/color] to talk to people.",
+    "char": "",
+    "tail": "32de942f7a",
+    "posx": -2751,
+    "posy": 8763,
+    "data": {
+
+    }
+  },
+  "32de942f7a": {
+    "key": "32de942f7a",
+    "type": 1,
+    "text": "People won't take you for a serious detective unless you talk to them whilst holding your [color=#00FFFF]magnifying glass[/color]. That's just common sense.",
+    "char": "",
+    "tail": "0ba50edb9b",
+    "posx": -2751,
+    "posy": 9363,
+    "data": {
+
+    }
+  },
+  "0ba50edb9b": {
+    "key": "0ba50edb9b",
+    "type": 1,
+    "text": "Also, remember to [color=#FF6600]turn around[/color] every so often, using that button up top.",
+    "char": "",
+    "tail": "8ce6cdb85c",
+    "posx": -2747,
+    "posy": 10034,
+    "data": {
+
+    }
+  },
+  "8ce6cdb85c": {
+    "key": "8ce6cdb85c",
+    "type": 1,
+    "text": "As you should already know, the greatest detectives are the ones that look at a crime scene from [color=#FF6600]both directions[/color].",
+    "char": "",
+    "tail": "ac8119d78c",
+    "posx": -2760,
+    "posy": 10688,
+    "data": {
+
+    }
+  },
+  "ac8119d78c": {
+    "key": "ac8119d78c",
+    "type": 1,
+    "text": "Now, go forth and solve this mystery! I'm sure you'll be able to find the killer before this train arrives at its destination.",
+    "char": "",
+    "tail": "",
+    "posx": -2762,
+    "posy": 11685,
     "data": {
 
     }

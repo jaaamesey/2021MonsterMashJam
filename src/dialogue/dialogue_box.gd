@@ -67,6 +67,8 @@ func _ready() -> void:
 	#visible = true
 	yield(get_tree().create_timer(0.75), "timeout")
 	set_process(true)
+	
+	dialogue_controller.go_to_dialogue("START")
 
 func _process(delta: float) -> void:
 	# Clamp delta to prevent skipping punctuation slowdown
