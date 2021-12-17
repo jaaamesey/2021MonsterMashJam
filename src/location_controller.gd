@@ -1,4 +1,7 @@
+class_name LocationController
 extends CanvasLayer
+
+var hidden_pickup_names := []
 
 func move_to(location_name: String):
 	var prev_location: Location = get_child(0)
@@ -10,4 +13,9 @@ func move_to(location_name: String):
 	yield(get_tree().create_timer(0.2), "timeout")
 	add_child(new_location)
 	prev_location.queue_free()
-	
+
+func hide_pickup(name: String):
+	hidden_pickup_names.push_back(name)
+
+func show_pickup(name: String):
+	hidden_pickup_names.erase(name)

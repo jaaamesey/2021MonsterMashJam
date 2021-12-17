@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Location",
 "language": "GDScript",
 "path": "res://src/location.gd"
+}, {
+"base": "CanvasLayer",
+"class": "LocationController",
+"language": "GDScript",
+"path": "res://src/location_controller.gd"
 } ]
 _global_script_class_icons={
 "ChoiceController": "",
 "DialogueBox": "",
 "DialogueController": "",
-"Location": ""
+"Location": "",
+"LocationController": ""
 }
 
 [application]

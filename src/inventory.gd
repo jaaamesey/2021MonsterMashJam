@@ -28,7 +28,15 @@ func _process(_delta: float):
 		selected_button.material = white_outline_material
 		var thickness := selected_button.texture_normal.get_size().length() / 85
 		selected_button.material.set_shader_param('line_thickness', thickness)
-
+	
+	$MouseCursor.visible = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	if selected_item and (!MainDialogueController.current_dialogue_block or MainDialogueController.current_dialogue_block.empty()):
+		var selected_button: TextureButton = item_name_to_button[selected_item.name]
+		$MouseCursor.texture = selected_button.texture_normal
+		$MouseCursor.visible = true
+		$MouseCursor.rect_global_position = get_global_mouse_position() + Vector2(-48, -20)
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	inventory_cursor.rect_global_position = inventory_cursor.rect_global_position.move_toward(cursor_target_pos, cursor_anim_spd)
 func _update_items(_item: Dictionary, items: Array):
 	for child in hbox.get_children():

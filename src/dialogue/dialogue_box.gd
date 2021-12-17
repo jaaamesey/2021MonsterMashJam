@@ -361,6 +361,23 @@ func handle_command(command : String):
 		"move_to":
 			var location_name: String = parameters[0]
 			location_controller.move_to(location_name)
+		"take":
+			var object_name: String = parameters[0]
+			var inventory_name: String = parameters[1]
+			var already_has_item := false
+			for item in MainInventoryController.items:
+				if item.name == inventory_name:
+					already_has_item = true
+			
+			if !already_has_item:
+				MainInventoryController.add_item({ name=inventory_name, image_path=("res://spr/props/" + object_name + ".png") })
+				location_controller.hide_pickup(object_name)
+		"hide_obj":
+			var object_name: String = parameters[0]
+			location_controller.hide_pickup(object_name)
+		"show_obj":
+			var object_name: String = parameters[0]
+			location_controller.show_pickup(object_name)
 		_:
 			push_warning("Unimplemented command: " + command)
 

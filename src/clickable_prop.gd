@@ -1,6 +1,6 @@
 extends Area2D
 
-var white_outline_material := preload("res://fx/simple_white_outline.tres")
+var white_outline_material := preload("res://fx/simple_white_outline.tres").duplicate()
 
 onready var location: Location = owner
 
@@ -21,7 +21,9 @@ func _on_unhover():
 
 
 func _on_selection_changed():
-	if location.get_selected_prop() == name:
+	if location.get_selected_prop() == name and name != "ded":
 		$Sprite.material = white_outline_material
+		var thickness: float = $Sprite.texture.get_size().length() / 85 
+		$Sprite.material.set_shader_param('line_thickness', thickness)
 	else:
 		$Sprite.material = null

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magnifying_glass.png-108773dca3afabf5c87ce4675a995f82.stex"
+path="res://.import/train_forward_less_old.png-32256f0b0c1270d05a48682516504a31.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/props/magnifying_glass.png"
-dest_files=[ "res://.import/magnifying_glass.png-108773dca3afabf5c87ce4675a995f82.stex" ]
+source_file="res://spr/bg/train_forward_less_old.png"
+dest_files=[ "res://.import/train_forward_less_old.png-32256f0b0c1270d05a48682516504a31.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

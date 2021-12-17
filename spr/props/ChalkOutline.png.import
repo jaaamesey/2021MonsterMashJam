@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/magnifying_glass.png-108773dca3afabf5c87ce4675a995f82.stex"
+path="res://.import/ChalkOutline.png-8c827ebaa8372eddc35c2f1599a15276.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/props/magnifying_glass.png"
-dest_files=[ "res://.import/magnifying_glass.png-108773dca3afabf5c87ce4675a995f82.stex" ]
+source_file="res://spr/props/ChalkOutline.png"
+dest_files=[ "res://.import/ChalkOutline.png-8c827ebaa8372eddc35c2f1599a15276.stex" ]
 
 [params]
 

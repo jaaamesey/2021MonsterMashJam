@@ -21,11 +21,11 @@
         "day": 17,
         "weekday": 5,
         "dst": false,
-        "hour": 3,
-        "minute": 5,
-        "second": 31
+        "hour": 19,
+        "minute": 18,
+        "second": 43
       },
-      "last_camera_pos": "(-2695.766602, 10760.229492)"
+      "last_camera_pos": "(8096.257324, 717.405518)"
     }
   },
   "772cea0167": {
@@ -946,8 +946,1300 @@
     "text": "Now, go forth and solve this mystery! I'm sure you'll be able to find the killer before this train arrives at its destination.",
     "char": "",
     "tail": "",
-    "posx": -2762,
-    "posy": 11685,
+    "posx": -2761,
+    "posy": 11508,
+    "data": {
+
+    }
+  },
+  "M_TutPas": {
+    "key": "M_TutPas",
+    "type": 1,
+    "text": "Need me to repeat myself? Alright.",
+    "char": "Passenger",
+    "tail": "4541fa2800",
+    "posx": -1838,
+    "posy": 7533,
+    "data": {
+
+    }
+  },
+  "M_door_lk": {
+    "key": "M_door_lk",
+    "type": 1,
+    "text": "This door is locked.",
+    "char": "-",
+    "tail": "",
+    "posx": 3412,
+    "posy": -2672,
+    "data": {
+
+    }
+  },
+  "1af6cb6c89": {
+    "key": "1af6cb6c89",
+    "type": 1,
+    "text": "...is maybe what the killer would say!",
+    "char": "",
+    "tail": "7dbaab4b14",
+    "posx": -4286,
+    "posy": -1431,
+    "data": {
+
+    }
+  },
+  "7dbaab4b14": {
+    "key": "7dbaab4b14",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -4296,
+    "posy": -879,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "cdce675056",
+        "3150a71266",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "This is the murder weapon",
+        "This is not the murder weapon",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "cdce675056": {
+    "key": "cdce675056",
+    "type": 1,
+    "text": "Added [color=red]murder weapon[/color] to inventory.",
+    "char": "-",
+    "tail": "1f7a9aabc6",
+    "posx": -5608,
+    "posy": -257,
+    "data": {
+
+    }
+  },
+  "1f7a9aabc6": {
+    "key": "1f7a9aabc6",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "347db0682c",
+    "posx": -5355,
+    "posy": 435,
+    "data": {
+      "command": "take(SDriver,Screwdriver)"
+    }
+  },
+  "3150a71266": {
+    "key": "3150a71266",
+    "type": 1,
+    "text": "Regardless, it's always good to keep a screwdriver around, in case something needs fixing.",
+    "char": "-",
+    "tail": "aab681565e",
+    "posx": -4275,
+    "posy": -677,
+    "data": {
+
+    }
+  },
+  "aab681565e": {
+    "key": "aab681565e",
+    "type": 1,
+    "text": "Added screwdriver to inventory.",
+    "char": "-",
+    "tail": "1f7a9aabc6",
+    "posx": -4614,
+    "posy": -134,
+    "data": {
+
+    }
+  },
+  "M_SDriver": {
+    "key": "M_SDriver",
+    "type": 1,
+    "text": "A screwdriver. This will certainly come in handy.",
+    "char": "-",
+    "tail": "1af6cb6c89",
+    "posx": -4286,
+    "posy": -2031,
+    "data": {
+
+    }
+  },
+  "347db0682c": {
+    "key": "347db0682c",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -5355,
+    "posy": 1035,
+    "data": {
+
+    }
+  },
+  "M_Guard1": {
+    "key": "M_Guard1",
+    "type": 1,
+    "text": "Halt! I can't let you -",
+    "char": "Train Guard",
+    "tail": "0af21964dc",
+    "posx": -6376,
+    "posy": -1984,
+    "data": {
+
+    }
+  },
+  "0af21964dc": {
+    "key": "0af21964dc",
+    "type": 1,
+    "text": "Oh, wait, you're a detective! I can tell from the magnifying glass! ",
+    "char": "",
+    "tail": "4b0b67ce46",
+    "posx": -6376,
+    "posy": -1384,
+    "data": {
+
+    }
+  },
+  "ae8dd6beb3": {
+    "key": "ae8dd6beb3",
+    "type": 1,
+    "text": "If you can prove that opening this door will be necessary for your investigation, then maybe I'll change my mind.",
+    "char": "",
+    "tail": "",
+    "posx": -7093,
+    "posy": -34,
+    "data": {
+
+    }
+  },
+  "4b0b67ce46": {
+    "key": "4b0b67ce46",
+    "type": 1,
+    "text": "Still, though. I'm not going to offer you any special treatment by letting you through this door.",
+    "char": "",
+    "tail": "ae8dd6beb3",
+    "posx": -6755,
+    "posy": -677,
+    "data": {
+
+    }
+  },
+  "S_Guard1": {
+    "key": "S_Guard1",
+    "type": 1,
+    "text": "Nice screwdriver you have there!",
+    "char": "Train Guard",
+    "tail": "d23c70b26d",
+    "posx": -7912,
+    "posy": -1964,
+    "data": {
+
+    }
+  },
+  "d23c70b26d": {
+    "key": "d23c70b26d",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -7919,
+    "posy": -1300,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "7ea101fc55",
+        "f552cd2c0c",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"Thanks!\"",
+        "\"Is this enough proof to allow me through that door?\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "7ea101fc55": {
+    "key": "7ea101fc55",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -9055,
+    "posy": -1344,
+    "data": {
+
+    }
+  },
+  "f552cd2c0c": {
+    "key": "f552cd2c0c",
+    "type": 1,
+    "text": "Depends. In what way is it related to your investigation?",
+    "char": "Train Guard",
+    "tail": "d6c1514218",
+    "posx": -8185,
+    "posy": -714,
+    "data": {
+
+    }
+  },
+  "d6c1514218": {
+    "key": "d6c1514218",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -8375,
+    "posy": -99,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "f89a17f4af",
+        "8a575687bb",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"I don't know\"",
+        "\"It's the murder weapon\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "8a575687bb": {
+    "key": "8a575687bb",
+    "type": 1,
+    "text": "Is it, now?",
+    "char": "Train Guard",
+    "tail": "3c5862dc21",
+    "posx": -8236,
+    "posy": 215,
+    "data": {
+
+    }
+  },
+  "1b696b2c4e": {
+    "key": "1b696b2c4e",
+    "type": 1,
+    "text": "Do you even know where the body is?",
+    "char": "",
+    "tail": "27b2777ea8",
+    "posx": -8236,
+    "posy": 1415,
+    "data": {
+
+    }
+  },
+  "c28f270970": {
+    "key": "c28f270970",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -9163,
+    "posy": 2611,
+    "data": {
+      "tail_count": 3,
+      "tails": [
+        "7af8ff6f42",
+        "f89a17f4af",
+        "7af8ff6f42",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"Yes\"",
+        "\"No\"",
+        "\"No, it's a promise\"",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "f89a17f4af": {
+    "key": "f89a17f4af",
+    "type": 1,
+    "text": "Then I can't let you through. Sorry.",
+    "char": "Train Guard",
+    "tail": "",
+    "posx": -9935,
+    "posy": 1149,
+    "data": {
+
+    }
+  },
+  "8d204321e2": {
+    "key": "8d204321e2",
+    "type": 1,
+    "text": "Is that a threat?",
+    "char": "Train Guard",
+    "tail": "c28f270970",
+    "posx": -9120,
+    "posy": 2045,
+    "data": {
+
+    }
+  },
+  "7af8ff6f42": {
+    "key": "7af8ff6f42",
+    "type": 1,
+    "text": "Well, I don't know about you, but I certainly don't want to go out being stabbed to death by a screwdriver.",
+    "char": "Train Guard",
+    "tail": "aa766214a4",
+    "posx": -9531,
+    "posy": 3210,
+    "data": {
+
+    }
+  },
+  "aa766214a4": {
+    "key": "aa766214a4",
+    "type": 1,
+    "text": "The guard runs off. Congratulations.",
+    "char": "-",
+    "tail": "",
+    "posx": -9531,
+    "posy": 3810,
+    "data": {
+      "command": "hide_obj(Guard1)"
+    }
+  },
+  "27b2777ea8": {
+    "key": "27b2777ea8",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -8228,
+    "posy": 1992,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "8d204321e2",
+        "f89a17f4af",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"Yes, it's right in front of me\"",
+        "\"No\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "3c5862dc21": {
+    "key": "3c5862dc21",
+    "type": 1,
+    "text": "Then may I ask - how did you get to that line of reasoning?",
+    "char": "",
+    "tail": "ec6bc6fa7f",
+    "posx": -8236,
+    "posy": 757,
+    "data": {
+
+    }
+  },
+  "ec6bc6fa7f": {
+    "key": "ec6bc6fa7f",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -7452,
+    "posy": 1172,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "1b696b2c4e",
+        "f89a17f4af",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"I'm confident it will be the murder weapon\"",
+        "\"I don't know, it's just a hunch\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "M_Banana": {
+    "key": "M_Banana",
+    "type": 1,
+    "text": "It's a banana.",
+    "char": "-",
+    "tail": "b6716bc489",
+    "posx": -11260,
+    "posy": -2264,
+    "data": {
+
+    }
+  },
+  "b6716bc489": {
+    "key": "b6716bc489",
+    "type": 1,
+    "text": "Take the banana?",
+    "char": "",
+    "tail": "fedf13b6ba",
+    "posx": -11260,
+    "posy": -1664,
+    "data": {
+
+    }
+  },
+  "fedf13b6ba": {
+    "key": "fedf13b6ba",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -11262,
+    "posy": -968,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "f2e87d0d70",
+        "07695cc18c",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "07695cc18c": {
+    "key": "07695cc18c",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -10846,
+    "posy": -589,
+    "data": {
+
+    }
+  },
+  "f2e87d0d70": {
+    "key": "f2e87d0d70",
+    "type": 1,
+    "text": "Banana added to inventory.",
+    "char": "-",
+    "tail": "",
+    "posx": -12060,
+    "posy": -484,
+    "data": {
+      "command": "take(Banana,Banana)"
+    }
+  },
+  "B_Guard1": {
+    "key": "B_Guard1",
+    "type": 1,
+    "text": "Stop waving that banana at me.",
+    "char": "Train Guard",
+    "tail": "",
+    "posx": -7515,
+    "posy": -2760,
+    "data": {
+
+    }
+  },
+  "M_Gatorade": {
+    "key": "M_Gatorade",
+    "type": 1,
+    "text": "It's a bottle of Gatorade.",
+    "char": "-",
+    "tail": "efe954f804",
+    "posx": -13370,
+    "posy": -3136,
+    "data": {
+
+    }
+  },
+  "bac38015ef": {
+    "key": "bac38015ef",
+    "type": 1,
+    "text": "Pick up the Gatorade bottle?",
+    "char": "",
+    "tail": "42e05aca23",
+    "posx": -13370,
+    "posy": -1936,
+    "data": {
+
+    }
+  },
+  "efe954f804": {
+    "key": "efe954f804",
+    "type": 1,
+    "text": "It looks like it's been left leaking on the floor for a while.",
+    "char": "",
+    "tail": "bac38015ef",
+    "posx": -13369,
+    "posy": -2548,
+    "data": {
+
+    }
+  },
+  "42e05aca23": {
+    "key": "42e05aca23",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -13575,
+    "posy": -1304,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "7b2cf7bc20",
+        "9a87172134",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "7b2cf7bc20": {
+    "key": "7b2cf7bc20",
+    "type": 1,
+    "text": "You try as hard as you can to pick it up off the floor, but unfortunately, it seems to be stuck.",
+    "char": "-",
+    "tail": "33911a708f",
+    "posx": -14220,
+    "posy": -1038,
+    "data": {
+
+    }
+  },
+  "9e84d3b244": {
+    "key": "9e84d3b244",
+    "type": 1,
+    "text": "Memory of Spilt Gatorade Bottle added to inventory.",
+    "char": "",
+    "tail": "",
+    "posx": -14236,
+    "posy": 175,
+    "data": {
+      "command": "take(GMEM,Memory of Spilt Gatorade Bottle)"
+    }
+  },
+  "9a87172134": {
+    "key": "9a87172134",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -13190,
+    "posy": -945,
+    "data": {
+
+    }
+  },
+  "33911a708f": {
+    "key": "33911a708f",
+    "type": 1,
+    "text": "Thankfully, as a copyright infringement detective, you have a really good memory.",
+    "char": "",
+    "tail": "9e84d3b244",
+    "posx": -14226,
+    "posy": -421,
+    "data": {
+
+    }
+  },
+  "7f9312b777": {
+    "key": "7f9312b777",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -1839,
+    "posy": 5870,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "7aa910db65",
+        "4d4d2582f8",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Suddenly describe your memory of a spilt Gatorade bottle to a complete stranger",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "G_TutPas": {
+    "key": "G_TutPas",
+    "type": 1,
+    "text": "Are you sure about this?",
+    "char": "-",
+    "tail": "7f9312b777",
+    "posx": -1837,
+    "posy": 5282,
+    "data": {
+
+    }
+  },
+  "7aa910db65": {
+    "key": "7aa910db65",
+    "type": 1,
+    "text": "Wow, that's so interesting!",
+    "char": "Passenger",
+    "tail": "3753e42fc0",
+    "posx": -2012,
+    "posy": 6048,
+    "data": {
+
+    }
+  },
+  "3753e42fc0": {
+    "key": "3753e42fc0",
+    "type": 1,
+    "text": "I think someone showed me a TikTok a few weeks ago where mixing blue Gatorade with potassium created Luminol.",
+    "char": "",
+    "tail": "c5b4a1bbd3",
+    "posx": -2010,
+    "posy": 6551,
+    "data": {
+
+    }
+  },
+  "4d4d2582f8": {
+    "key": "4d4d2582f8",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -923,
+    "posy": 5251,
+    "data": {
+
+    }
+  },
+  "c5b4a1bbd3": {
+    "key": "c5b4a1bbd3",
+    "type": 1,
+    "text": "You know, that liquid that detects bloodstains. Funny, that.",
+    "char": "",
+    "tail": "",
+    "posx": -929,
+    "posy": 6580,
+    "data": {
+
+    }
+  },
+  "eb969a1136": {
+    "key": "eb969a1136",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -15117,
+    "posy": -2659,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "6457656d79",
+        "afef265297",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "B_Gatorade": {
+    "key": "B_Gatorade",
+    "type": 1,
+    "text": "Mix the banana with the blue Gatorade to create Luminol?",
+    "char": "-",
+    "tail": "eb969a1136",
+    "posx": -15090,
+    "posy": -3292,
+    "data": {
+
+    }
+  },
+  "afef265297": {
+    "key": "afef265297",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -14255,
+    "posy": -3564,
+    "data": {
+
+    }
+  },
+  "6457656d79": {
+    "key": "6457656d79",
+    "type": 1,
+    "text": "It looks like this concoction will only be stable for a few seconds! Where do you flick your banana-Gatorade mixture?",
+    "char": "-",
+    "tail": "c7484eb35e",
+    "posx": -15542,
+    "posy": -2321,
+    "data": {
+
+    }
+  },
+  "ef6c281db6": {
+    "key": "ef6c281db6",
+    "type": 1,
+    "text": "You hastily splash some of the mysterious blue and yellow liquid at the locked door.",
+    "char": "-",
+    "tail": "69365c636e",
+    "posx": -16764,
+    "posy": -825,
+    "data": {
+
+    }
+  },
+  "fc2e8843fc": {
+    "key": "fc2e8843fc",
+    "type": 1,
+    "text": "You sling some of the mysterious blue and yellow liquid at the nearest passenger. They give you a cold glare.",
+    "char": "-",
+    "tail": "",
+    "posx": -16739,
+    "posy": -1661,
+    "data": {
+
+    }
+  },
+  "ed212b9d7f": {
+    "key": "ed212b9d7f",
+    "type": 1,
+    "text": "Nothing happens. You look like a fool.",
+    "char": "",
+    "tail": "",
+    "posx": -15412,
+    "posy": -740,
+    "data": {
+
+    }
+  },
+  "16841f3751": {
+    "key": "16841f3751",
+    "type": 1,
+    "text": "You hastily splash some of the mysterious blue and yellow liquid at the door to carriage A.",
+    "char": "-",
+    "tail": "ed212b9d7f",
+    "posx": -15599,
+    "posy": -1340,
+    "data": {
+
+    }
+  },
+  "b1155a0f3e": {
+    "key": "b1155a0f3e",
+    "type": 1,
+    "text": "You splash some of the mysterious blue and yellow liquid at the back seats.",
+    "char": "-",
+    "tail": "ed212b9d7f",
+    "posx": -14782,
+    "posy": -1513,
+    "data": {
+
+    }
+  },
+  "69365c636e": {
+    "key": "69365c636e",
+    "type": 1,
+    "text": "For a few seconds, what appear to be [color=red]old bloodstains[/color] reveal themselves at the very bottom of the door. ",
+    "char": "",
+    "tail": "d8edf054ae",
+    "posx": -16764,
+    "posy": -225,
+    "data": {
+
+    }
+  },
+  "d8edf054ae": {
+    "key": "d8edf054ae",
+    "type": 1,
+    "text": "What could this mean?",
+    "char": "",
+    "tail": "6810f598ea",
+    "posx": -16764,
+    "posy": 375,
+    "data": {
+
+    }
+  },
+  "6810f598ea": {
+    "key": "6810f598ea",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -16794,
+    "posy": 954,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "fe71e314af",
+        "2c8176cda1",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "The body could have been dragged from the other side of that door",
+        "Probably nothing",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "2c8176cda1": {
+    "key": "2c8176cda1",
+    "type": 1,
+    "text": "You're right, it's probably nothing. It's possible someone just had a nasty papercut and spilt blood underneath this door.",
+    "char": "-",
+    "tail": "",
+    "posx": -16150,
+    "posy": 1274,
+    "data": {
+
+    }
+  },
+  "fe71e314af": {
+    "key": "fe71e314af",
+    "type": 1,
+    "text": "But that doesn't make sense - there is no other side to that door!",
+    "char": "-",
+    "tail": "ed8a544b25",
+    "posx": -17261,
+    "posy": 1265,
+    "data": {
+
+    }
+  },
+  "ed8a544b25": {
+    "key": "ed8a544b25",
+    "type": 1,
+    "text": "This is a two-carriage service! There shouldn't be a carriage C!",
+    "char": "",
+    "tail": "b6a9c757ea",
+    "posx": -17261,
+    "posy": 1865,
+    "data": {
+
+    }
+  },
+  "b6a9c757ea": {
+    "key": "b6a9c757ea",
+    "type": 1,
+    "text": "This calls for some advanced detective work.",
+    "char": "",
+    "tail": "8a2c51bf83",
+    "posx": -17261,
+    "posy": 2465,
+    "data": {
+
+    }
+  },
+  "8a2c51bf83": {
+    "key": "8a2c51bf83",
+    "type": 1,
+    "text": "No guards are around - it's time to bring out your trusty [color=#00FFFF]lockpicking set[/color].",
+    "char": "",
+    "tail": "af06ca43fd",
+    "posx": -17261,
+    "posy": 3065,
+    "data": {
+
+    }
+  },
+  "af06ca43fd": {
+    "key": "af06ca43fd",
+    "type": 1,
+    "text": "You know, the one you use for breaking into people's houses if they upload a YouTube video with three seconds of copyrighted music.",
+    "char": "",
+    "tail": "94c0b3552e",
+    "posx": -17261,
+    "posy": 3665,
+    "data": {
+
+    }
+  },
+  "94c0b3552e": {
+    "key": "94c0b3552e",
+    "type": 1,
+    "text": "Because you're a copyright infringement detective.",
+    "char": "",
+    "tail": "14b939b96c",
+    "posx": -17261,
+    "posy": 4265,
+    "data": {
+
+    }
+  },
+  "14b939b96c": {
+    "key": "14b939b96c",
+    "type": 1,
+    "text": "Lockpicking set added to inventory.",
+    "char": "",
+    "tail": "",
+    "posx": -17251,
+    "posy": 4850,
+    "data": {
+      "command": "take(lockpickingset,Lockpicking Set)"
+    }
+  },
+  "M_door_lk2": {
+    "key": "M_door_lk2",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "M_door_lk",
+    "posx": 3872,
+    "posy": -3215,
+    "data": {
+
+    }
+  },
+  "c7484eb35e": {
+    "key": "c7484eb35e",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": -15569,
+    "posy": -1771,
+    "data": {
+      "tail_count": 5,
+      "tails": [
+        "fc2e8843fc",
+        "16841f3751",
+        "ef6c281db6",
+        "b1155a0f3e",
+        "f54bc50893",
+        ""
+      ],
+      "choices": [
+        "At the nearest passenger",
+        "At the door to carriage A",
+        "At the locked door",
+        "At the back seats",
+        "At the outline of the dead body",
+        ""
+      ]
+    }
+  },
+  "f54bc50893": {
+    "key": "f54bc50893",
+    "type": 1,
+    "text": "You sling some of the mysterious blue and yellow liquid at the outline of the dead body.",
+    "char": "-",
+    "tail": "4bf0bb4587",
+    "posx": -17457,
+    "posy": -2438,
+    "data": {
+
+    }
+  },
+  "4bf0bb4587": {
+    "key": "4bf0bb4587",
+    "type": 1,
+    "text": "For a few seconds, you see a few patches of blood leading up to the door. Maybe you should try splashing some Luminol there instead?",
+    "char": "",
+    "tail": "",
+    "posx": -17822,
+    "posy": -1812,
+    "data": {
+
+    }
+  },
+  "M_ded": {
+    "key": "M_ded",
+    "type": 1,
+    "text": "It's an outline of the person that was presumably murdered.",
+    "char": "-",
+    "tail": "d4aaf827d5",
+    "posx": -19089,
+    "posy": -2335,
+    "data": {
+
+    }
+  },
+  "d4aaf827d5": {
+    "key": "d4aaf827d5",
+    "type": 1,
+    "text": "Since you're the type of detective that solves instances of alleged copyright infringement, not murders, you don't really gather much from this.",
+    "char": "",
+    "tail": "2a661e78f5",
+    "posx": -19089,
+    "posy": -1735,
+    "data": {
+
+    }
+  },
+  "2a661e78f5": {
+    "key": "2a661e78f5",
+    "type": 1,
+    "text": "It's strange that there isn't much blood here, though.",
+    "char": "",
+    "tail": "",
+    "posx": -19089,
+    "posy": -1135,
+    "data": {
+
+    }
+  },
+  "L_door_lk2": {
+    "key": "L_door_lk2",
+    "type": 1,
+    "text": "Here goes nothing.",
+    "char": "-",
+    "tail": "7fd7d7e806",
+    "posx": 4928,
+    "posy": -3261,
+    "data": {
+
+    }
+  },
+  "e818ea0f78": {
+    "key": "e818ea0f78",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 4908,
+    "posy": -2152,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "c9442e97b8",
+        "943485359b",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "Yes",
+        "No",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "7fd7d7e806": {
+    "key": "7fd7d7e806",
+    "type": 1,
+    "text": "Open the door with your lockpicking set?",
+    "char": "",
+    "tail": "e818ea0f78",
+    "posx": 4930,
+    "posy": -2689,
+    "data": {
+
+    }
+  },
+  "c9442e97b8": {
+    "key": "c9442e97b8",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 6615,
+    "posy": -3364,
+    "data": {
+      "command": "move_to(rich.tscn)"
+    }
+  },
+  "943485359b": {
+    "key": "943485359b",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 5463,
+    "posy": -1850,
+    "data": {
+
+    }
+  },
+  "END": {
+    "key": "END",
+    "type": 1,
+    "text": "Welcome to carriage C, also known as [color=yellow]super first class[/color].",
+    "char": "???",
+    "tail": "d9c68b78b5",
+    "posx": 8012,
+    "posy": -3295,
+    "data": {
+
+    }
+  },
+  "d9c68b78b5": {
+    "key": "d9c68b78b5",
+    "type": 1,
+    "text": "Before I walk you to the buffet, may I get your name, blood type, and membership number?",
+    "char": "",
+    "tail": "6e7e13b372",
+    "posx": 8005,
+    "posy": -2690,
+    "data": {
+
+    }
+  },
+  "6e7e13b372": {
+    "key": "6e7e13b372",
+    "type": 4,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 8020,
+    "posy": -1959,
+    "data": {
+      "tail_count": 2,
+      "tails": [
+        "2286ad99d5",
+        "2286ad99d5",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "choices": [
+        "\"I'm not a member\"",
+        "\"John Smith, O+, 12345678\"",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  "2286ad99d5": {
+    "key": "2286ad99d5",
+    "type": 1,
+    "text": "...I see.",
+    "char": "???",
+    "tail": "ed7729439a",
+    "posx": 7659,
+    "posy": -1437,
+    "data": {
+
+    }
+  },
+  "ed7729439a": {
+    "key": "ed7729439a",
+    "type": 1,
+    "text": "No, you're not a member of [color=yellow]super first class[/color], are you? Just like that other fellow.",
+    "char": "",
+    "tail": "9dcb5c7bc2",
+    "posx": 7659,
+    "posy": -837,
+    "data": {
+
+    }
+  },
+  "9dcb5c7bc2": {
+    "key": "9dcb5c7bc2",
+    "type": 1,
+    "text": "I'm afraid we can't let you live. The public must not know about carriage C and [color=yellow]super first class[/color].",
+    "char": "",
+    "tail": "843396862f",
+    "posx": 7659,
+    "posy": -237,
+    "data": {
+
+    }
+  },
+  "THE_END": {
+    "key": "THE_END",
+    "type": 1,
+    "text": "",
+    "char": "",
+    "tail": "",
+    "posx": 7680,
+    "posy": 864,
+    "data": {
+      "command": "end_game"
+    }
+  },
+  "843396862f": {
+    "key": "843396862f",
+    "type": 1,
+    "text": "Goodbye.",
+    "char": "",
+    "tail": "THE_END",
+    "posx": 7675,
+    "posy": 295,
     "data": {
 
     }

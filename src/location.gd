@@ -6,6 +6,7 @@ signal selection_changed
 var current_look_direction := "Forward"
 var props_under_cursor := []
 var can_click_on_prop := false
+onready var location_controller: Node = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +16,11 @@ func _ready():
 	$BlackOverlay/AnimationPlayer.play("fade_in")
 	can_click_on_prop = true
 
+func _process(delta):
+	for child in $Directions.get_node(current_look_direction).get_node("Pickups").get_children():
+		if location_controller.hidden_pickup_names.has(child.name):
+			child.visible = false
+		
 func _input(_event):
 	if Input.is_action_just_released("click") and can_click_on_prop and !$TurnAroundButton.pressed:
 		var selected_prop = get_selected_prop()

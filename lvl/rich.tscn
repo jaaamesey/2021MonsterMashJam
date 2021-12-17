@@ -1,0 +1,191 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://spr/bg/carriageBuffetInterior.png" type="Texture" id=1]
+[ext_resource path="res://fnt/default_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://lvl/ending.gd" type="Script" id=3]
+[ext_resource path="res://fx/godrays.tscn" type="PackedScene" id=4]
+[ext_resource path="res://fx/vignette.gdshader" type="Shader" id=5]
+[ext_resource path="res://fx/vignette.tscn" type="PackedScene" id=6]
+[ext_resource path="res://fx/godrays.gdshader" type="Shader" id=7]
+[ext_resource path="res://src/location.gd" type="Script" id=8]
+[ext_resource path="res://spr/props/end.png" type="Texture" id=9]
+[ext_resource path="res://snd/richpeeps.ogg" type="AudioStream" id=14]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 5 )
+shader_param/vignette_intensity = 1.291
+shader_param/vignette_opacity = 0.148
+shader_param/vignette_rgb = Color( 0.176471, 0.00784314, 0.00784314, 1 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 7 )
+shader_param/angle = 0.248
+shader_param/position = 0.241
+shader_param/spread = 0.5
+shader_param/cutoff = 0.1
+shader_param/falloff = 0.2
+shader_param/edge_fade = 0.163
+shader_param/speed = 4.089
+shader_param/ray1_density = 8.0
+shader_param/ray2_density = 30.0
+shader_param/ray2_intensity = 0.3
+shader_param/color = Color( 0.988235, 1, 0.305882, 0.403922 )
+shader_param/hdr = true
+shader_param/seed = 6.757
+
+[sub_resource type="Animation" id=3]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="ExampleLocation2" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Directions" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Forward" type="Control" parent="Directions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pickups" type="Control" parent="Directions/Forward"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Backward" type="Control" parent="Directions"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pickups" type="Control" parent="Directions/Backward"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="Vignette" parent="." instance=ExtResource( 6 )]
+material = SubResource( 1 )
+
+[node name="Godrays" parent="." instance=ExtResource( 4 )]
+material = SubResource( 6 )
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackOverlay"]
+anims/fade_in = SubResource( 3 )
+anims/fade_out = SubResource( 4 )
+anims/idle = SubResource( 5 )
+
+[node name="Ending" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndScreen" type="Control" parent="Ending"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Ending/EndScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="TurnAroundButton" type="Button" parent="."]
+visible = false
+margin_left = 526.0
+margin_top = 16.0
+margin_right = 777.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 2 )
+text = "Turn around"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -14.568
+pitch_scale = 0.94
+autoplay = true
