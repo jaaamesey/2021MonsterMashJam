@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/triangle.png-5db86cd8cb02a28fde4b8c77dd53aa71.stex"
+path="res://.import/paper.png-cda8362cf1a7c763b498ac157f25aba1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/dialogue/triangle.png"
-dest_files=[ "res://.import/triangle.png-5db86cd8cb02a28fde4b8c77dd53aa71.stex" ]
+source_file="res://spr/props/paper.png"
+dest_files=[ "res://.import/paper.png-cda8362cf1a7c763b498ac157f25aba1.stex" ]
 
 [params]
 

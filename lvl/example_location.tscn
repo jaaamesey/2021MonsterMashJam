@@ -1,6 +1,6 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://spr/bg/train_forward.png" type="Texture" id=1]
+[ext_resource path="res://spr/bg/carriageFacingBackward/CarriageInteriorDay2.png" type="Texture" id=1]
 [ext_resource path="res://fnt/default_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://spr/props/Person.png" type="Texture" id=3]
 [ext_resource path="res://fx/godrays.tscn" type="PackedScene" id=4]
@@ -12,8 +12,12 @@
 [ext_resource path="res://icon.png" type="Texture" id=10]
 [ext_resource path="res://spr/props/SDriver.png" type="Texture" id=11]
 [ext_resource path="res://spr/props/Banana.png" type="Texture" id=12]
-[ext_resource path="res://spr/bg/carriageinteriorDayLight.png" type="Texture" id=13]
-[ext_resource path="res://spr/bg/CarriageInteriorDayBG01.png" type="Texture" id=14]
+[ext_resource path="res://spr/bg/carriageFacingBackward/carriageinteriorDayLight2.png" type="Texture" id=13]
+[ext_resource path="res://src/bg_blur.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/turn_around_button.tscn" type="PackedScene" id=15]
+[ext_resource path="res://spr/props/paper.png" type="Texture" id=16]
+[ext_resource path="res://spr/bg/carriageFacingForward/CarriageInteriorDay.png" type="Texture" id=17]
+[ext_resource path="res://spr/bg/carriageFacingForward/carriageinteriorDayLight.png" type="Texture" id=18]
 
 [sub_resource type="CircleShape2D" id=9]
 
@@ -120,24 +124,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect3" type="TextureRect" parent="Directions/Forward"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource( 14 )
-expand = true
-stretch_mode = 7
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="BGBlur" parent="Directions/Forward" instance=ExtResource( 14 )]
 
 [node name="TextureRect" type="TextureRect" parent="Directions/Forward"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-texture = ExtResource( 1 )
+texture = ExtResource( 17 )
 expand = true
 stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="Directions/Forward/TextureRect"]
 visible = false
@@ -165,7 +163,7 @@ rotation = -1.55359
 scale = Vector2( 0.123288, 0.361449 )
 
 [node name="CollisionPolygon2D" parent="Directions/Forward/Pickups/Banana" index="0"]
-polygon = PoolVector2Array( 252.717, 102.085, 350.769, 108.903, 403.566, 114.481, 433.736, 135.554, 441.278, 160.966, 428.079, 193.815, 407.337, 209.31, 373.396, 223.565, 328.142, 237.821, 275.345, 244.019, 175.407, 245.878, 67.9277, 248.977, 26.4444, 242.779, 20.7875, 229.763, 47.186, 221.706, 177.293, 212.409, 260.26, 195.674, 305.514, 175.841, 324.37, 157.867, 316.828, 135.554, 284.773, 123.778, 228.204, 112.621, 224.433, 103.324 )
+polygon = PoolVector2Array( 252.717, 102.085, 315.169, 103.855, 403.566, 114.481, 438.353, 133.569, 441.278, 160.966, 428.079, 193.815, 407.337, 209.31, 373.396, 223.565, 328.142, 237.821, 275.345, 244.019, 175.407, 245.878, 67.9277, 248.977, 26.4444, 242.779, 20.7875, 229.763, 47.186, 221.706, 177.293, 212.409, 260.26, 195.674, 305.514, 175.841, 324.37, 157.867, 316.828, 135.554, 283.846, 126.175, 228.204, 112.621, 224.433, 103.324 )
 
 [node name="Sprite" parent="Directions/Forward/Pickups/Banana" index="1"]
 position = Vector2( 109.365, 86.7719 )
@@ -175,7 +173,24 @@ texture = ExtResource( 12 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Forward/Pickups/Banana"]
 visible = false
 position = Vector2( 143.306, 88.6313 )
-scale = Vector2( 1, 1 )
+shape = SubResource( 9 )
+
+[node name="Paper" parent="Directions/Forward/Pickups" instance=ExtResource( 9 )]
+position = Vector2( 672, 300 )
+rotation = -0.00460511
+scale = Vector2( 0.0794757, 0.233003 )
+
+[node name="CollisionPolygon2D" parent="Directions/Forward/Pickups/Paper" index="0"]
+polygon = PoolVector2Array( 138.906, 142.946, 137.917, 216.24, 334.89, 216.549, 317.972, 143.227 )
+
+[node name="Sprite" parent="Directions/Forward/Pickups/Paper" index="1"]
+position = Vector2( 109.365, 86.7719 )
+scale = Vector2( 0.631806, 0.210662 )
+texture = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Forward/Pickups/Paper"]
+visible = false
+position = Vector2( 143.306, 88.6313 )
 shape = SubResource( 9 )
 
 [node name="door_lk" parent="Directions/Forward" instance=ExtResource( 9 )]
@@ -192,7 +207,6 @@ texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Forward/door_lk"]
 position = Vector2( 43.3696, 3.7188 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="TutPas" parent="Directions/Forward" instance=ExtResource( 9 )]
@@ -210,14 +224,13 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Forward/TutPas"]
 position = Vector2( 143.306, 88.6313 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 7 )
 
 [node name="TextureRect4" type="TextureRect" parent="Directions/Forward"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-texture = ExtResource( 13 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 7
 __meta__ = {
@@ -232,17 +245,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect3" type="TextureRect" parent="Directions/Backward"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource( 14 )
-expand = true
-stretch_mode = 7
+[node name="BGBlur2" parent="Directions/Backward" instance=ExtResource( 14 )]
 flip_h = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="Directions/Backward"]
 anchor_right = 1.0
@@ -251,7 +255,6 @@ mouse_filter = 2
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
-flip_h = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -283,7 +286,6 @@ texture = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Backward/door_tst"]
 position = Vector2( 43.3696, 3.7188 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 6 )
 
 [node name="ekans#2" parent="Directions/Backward" instance=ExtResource( 9 )]
@@ -315,7 +317,6 @@ texture = ExtResource( 3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Directions/Backward/Pickups/Guard1"]
 position = Vector2( 141.207, 59.6998 )
 rotation = 0.0199042
-scale = Vector2( 1, 1 )
 shape = SubResource( 8 )
 
 [node name="SDriver" parent="Directions/Backward/Pickups" instance=ExtResource( 9 )]
@@ -324,7 +325,8 @@ rotation = 0.0348513
 scale = Vector2( 0.08282, 0.08282 )
 
 [node name="CollisionPolygon2D" parent="Directions/Backward/Pickups/SDriver" index="0"]
-polygon = PoolVector2Array( 411.775, -178.328, 71.3311, 48.6348, 45.3926, 97.2697, -197.782, 291.809, -188.055, 317.748, -165.358, 324.232, 64.8464, 145.904, 77.8158, 171.843, 152.389, 139.42, 269.113, 71.3311, 308.021, 22.6963, 372.867, -6.48462, 421.502, -42.1501, 483.106, -119.966, 470.137, -168.601, 434.471, -191.297 )
+position = Vector2( -146.908, -55.2861 )
+polygon = PoolVector2Array( 380.256, -182.402, 71.3311, 48.6348, 45.3926, 97.2697, -197.782, 291.809, -181.713, 332.542, -145.091, 343.347, 66.6462, 178.902, 126.14, 152.664, 152.389, 139.42, 280.908, 86.8599, 339.981, 48.5552, 398.634, -1.81641, 457.707, -40.1216, 575.011, -140.865, 498.823, -246.944, 427.262, -220.286 )
 
 [node name="Sprite" parent="Directions/Backward/Pickups/SDriver" index="1"]
 texture = ExtResource( 11 )
@@ -336,7 +338,6 @@ mouse_filter = 2
 texture = ExtResource( 13 )
 expand = true
 stretch_mode = 7
-flip_h = true
 
 [node name="Godrays" parent="Directions/Backward" instance=ExtResource( 4 )]
 material = SubResource( 2 )
@@ -358,15 +359,10 @@ anims/fade_in = SubResource( 3 )
 anims/fade_out = SubResource( 4 )
 anims/idle = SubResource( 5 )
 
-[node name="TurnAroundButton" type="Button" parent="."]
-margin_left = 526.0
-margin_top = 16.0
-margin_right = 777.0
-margin_bottom = 56.0
-custom_fonts/font = ExtResource( 2 )
-text = "Turn around"
+[node name="TurnAroundButton" parent="." instance=ExtResource( 15 )]
 
 [editable path="Directions/Forward/Pickups/Banana"]
+[editable path="Directions/Forward/Pickups/Paper"]
 [editable path="Directions/Forward/door_lk"]
 [editable path="Directions/Forward/TutPas"]
 [editable path="Directions/Backward/door_tst"]

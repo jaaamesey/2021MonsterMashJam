@@ -18,14 +18,14 @@
       "last_saved": {
         "year": 2021,
         "month": 12,
-        "day": 17,
-        "weekday": 5,
+        "day": 23,
+        "weekday": 4,
         "dst": false,
-        "hour": 19,
-        "minute": 18,
-        "second": 43
+        "hour": 22,
+        "minute": 48,
+        "second": 37
       },
-      "last_camera_pos": "(8096.257324, 717.405518)"
+      "last_camera_pos": "(2833.900146, 4482.86084)"
     }
   },
   "772cea0167": {
@@ -2240,6 +2240,18 @@
     "tail": "THE_END",
     "posx": 7675,
     "posy": 295,
+    "data": {
+
+    }
+  },
+  "M_Paper": {
+    "key": "M_Paper",
+    "type": 1,
+    "text": "\"Sydney Trains would like to inform its customers that they can skip unwanted dialogue by left clicking whilst holding down the 'Control' or 'S' key.\"",
+    "char": "-",
+    "tail": "",
+    "posx": 3012,
+    "posy": 4081,
     "data": {
 
     }

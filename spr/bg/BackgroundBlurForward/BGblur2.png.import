@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/triangle.png-5db86cd8cb02a28fde4b8c77dd53aa71.stex"
+path="res://.import/BGblur2.png-24d09ab37a1d24e348664875a2b473b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/dialogue/triangle.png"
-dest_files=[ "res://.import/triangle.png-5db86cd8cb02a28fde4b8c77dd53aa71.stex" ]
+source_file="res://spr/bg/BackgroundBlurForward/BGblur2.png"
+dest_files=[ "res://.import/BGblur2.png-24d09ab37a1d24e348664875a2b473b3.stex" ]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
-flags/mipmaps=true
+flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
 process/fix_alpha_border=true

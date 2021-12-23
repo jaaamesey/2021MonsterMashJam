@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carriageinteriorDayLight.png-d32c4d863f1eef55e3c68f3f6dd9f66b.stex"
+path="res://.import/CarriageInteriorDay2.png-3b87647c7e29beb4f23ee4aca0fe5e2c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/bg/carriageinteriorDayLight.png"
-dest_files=[ "res://.import/carriageinteriorDayLight.png-d32c4d863f1eef55e3c68f3f6dd9f66b.stex" ]
+source_file="res://spr/bg/carriageFacingBackward/CarriageInteriorDay2.png"
+dest_files=[ "res://.import/CarriageInteriorDay2.png-3b87647c7e29beb4f23ee4aca0fe5e2c.stex" ]
 
 [params]
 

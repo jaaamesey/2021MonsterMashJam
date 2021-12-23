@@ -75,7 +75,7 @@ func _process(delta: float) -> void:
 	delta = clamp(delta, 0, Engine.time_scale * 1.0/60.0)
 
 	var is_keyboard_skip_held := Input.is_key_pressed(KEY_CONTROL) and Input.is_mouse_button_pressed(BUTTON_LEFT)
-	var is_gamepad_skip_held := Input.is_action_pressed("skip_dialogue") and Input.is_action_pressed("next_dialogue")
+	var is_gamepad_skip_held := Input.is_action_pressed("skip_dialogue") and (Input.is_action_pressed("next_dialogue") or Input.is_mouse_button_pressed(BUTTON_LEFT))
 	var is_skipping : bool = visible and (is_keyboard_skip_held or is_gamepad_skip_held)
 
 	if is_blocked():

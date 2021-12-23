@@ -1,10 +1,20 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://spr/util/ekans.png" type="Texture" id=1]
 [ext_resource path="res://spr/props/magnifying_glass.png" type="Texture" id=2]
 [ext_resource path="res://spr/dialogue/triangle.png" type="Texture" id=3]
 [ext_resource path="res://fnt/public_sans/PublicSans-Regular.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://src/inventory.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0705882, 0.0627451, 0.0627451, 0.87451 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
 
 [sub_resource type="DynamicFont" id=1]
 size = 14
@@ -23,23 +33,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="PanelContainer" parent="."]
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 363.0
-margin_top = -74.0
-margin_right = -363.0
-margin_bottom = -9.0
-color = Color( 0, 0, 0, 0.741176 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -277.0
+margin_top = -68.0
+margin_right = 277.0
+custom_styles/panel = SubResource( 2 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 552.0
+margin_bottom = 66.0
 follow_focus = true
 scroll_vertical_enabled = false
 __meta__ = {
@@ -86,9 +94,9 @@ __meta__ = {
 
 [node name="InventoryCursor" type="TextureRect" parent="."]
 margin_left = 363.0
-margin_top = 626.0
+margin_top = 630.0
 margin_right = 434.0
-margin_bottom = 645.0
+margin_bottom = 649.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 6

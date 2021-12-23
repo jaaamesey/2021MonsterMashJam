@@ -21,6 +21,7 @@ func _process(delta):
 		if location_controller.hidden_pickup_names.has(child.name):
 			child.visible = false
 		
+		
 func _input(_event):
 	if Input.is_action_just_released("click") and can_click_on_prop and !$TurnAroundButton.pressed:
 		var selected_prop = get_selected_prop()

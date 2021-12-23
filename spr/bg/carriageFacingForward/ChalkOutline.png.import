@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/train_forward.png-48d0a29f0623ba76b0fbfda9c0ccd468.stex"
+path="res://.import/ChalkOutline.png-af149fd83db3d27662c04a3b52fa1029.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spr/bg/train_forward.png"
-dest_files=[ "res://.import/train_forward.png-48d0a29f0623ba76b0fbfda9c0ccd468.stex" ]
+source_file="res://spr/bg/carriageFacingForward/ChalkOutline.png"
+dest_files=[ "res://.import/ChalkOutline.png-af149fd83db3d27662c04a3b52fa1029.stex" ]
 
 [params]
 
